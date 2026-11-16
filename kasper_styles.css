@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Overrides the default font-sans utility */
+  --font-sans: "Inter", var(--font-sans);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, #C8102E, #610C0D);
+  background-attachment: fixed;
+
+  color: #ffffff;
+}
+
+
+.rolling-text {
+  padding-left: 100%;
+  animation: roll-left 30s linear infinite;
+}
+
+@keyframes roll-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
